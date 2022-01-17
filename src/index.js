@@ -2,6 +2,9 @@
 // doccument.getElementById("click").onclick = function hello() {
 //   document.getElementById("click").textContent = "hello";
 // };
+
+console.log("hello world");
+
 var date = new Date().toLocaleDateString("en-US", {
   day: "numeric",
   month: "short",
