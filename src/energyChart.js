@@ -1,15 +1,15 @@
-import Chart from "chart.js/auto";
-const ctx = document.getElementById("energy-chart").getContext("2d");
+import Chart from 'chart.js/auto';
+const ctx = document.getElementById('energy-chart').getContext('2d');
 
 const dayTimeForm = document.querySelector("[class='dayTimeForm']");
 const dayStart = document.querySelector("[id='startInput']");
 const dayEnd = document.querySelector("[id='endInput']");
 
-function calculateDay(start, end) {
-  for (let i = start; i <= end; i++) {
-    label.push(i);
-  }
-}
+// function calculateDay(start, end) {
+//   for (let i = start; i <= end; i++) {
+//     label.push(i);
+//   }
+// }
 
 const dayV = [];
 
@@ -23,19 +23,19 @@ dayTimeForm.onsubmit = (e) => {
   }
   console.log(hourLabel);
   const energyChart = new Chart(ctx, {
-    type: "line",
+    type: 'line',
     data: {
       labels: hourLabel,
       datasets: [
         {
-          label: "Alertness",
+          label: 'Alertness',
           data: [10, 9, 9, 10, 7, 4, 8, 7.5, 6, 5, 8, 8],
-          borderColor: "rgb(75, 192, 192)",
+          borderColor: 'rgb(75, 192, 192)',
         },
         {
-          label: "Energy",
+          label: 'Energy',
           data: [10, 10, 9, 10, 7, 4, 8, 7, 6, 5, 9, 9],
-          borderColor: "rgb(195, 144, 25)",
+          borderColor: 'rgb(195, 144, 25)',
         },
       ],
     },
