@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Atomic Planner</title>
+    <script type="module" crossorigin src="/atomic-planner/assets/index.f6c39c75.js"></script>
+    <link rel="stylesheet" href="/atomic-planner/assets/index.3360bdca.css">
+  </head>
+  <body>
+    <div class="info-wrapper">
+      <div class="head-container">
+        <h1>So... What is this all about?</h1>
+        <p>
+          This website was made for my personal planning needs, but can also be
+          used by others; <br />
+          I desgined it based on the principals persented in "Atomic Habits" by
+          James Clear:
+        </p>
+      </div>
+      <div class="list-container">
+        <ul class="principal-list">
+          <li>
+            Habit Stacking: I will do ___ at ___ during ____, then I will do ___
+            etc
+          </li>
+          <li>Giving high priority to the NOT-to-do list</li>
+          <li>
+            Strucutring micro and macro plans and creating your own deadlines to
+            stay on track with values
+          </li>
+          <li>
+            To make sure you are sticking with your values or the values you
+            want, you will use an Esienhower square
+          </li>
+          <li>
+            Included parameters for fault tolerance, and timing how long tasks
+            take
+          </li>
+          <li>
+            Graph energy levels throughout the day, and plan deepwork based on
+            those
+          </li>
+          <li>
+            A system to break larger tasks into smaller ones (side quests)
+          </li>
+          <li>
+            Checkboxes, and other dopeamine producing systems spread throughout
+            the website
+          </li>
+          <li>And many other smaller principals applied throughout</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="app-wrapper">
+      <div class="sidebar-wrapper"></div>
+      <div class="task-wrapper">
+        <div class="heading" id="heading"></div>
+        <!-- <div class="top-form">
+          <form class="dayTimeForm">
+            <label for="startInput">Day Starts at:</label>
+            <input type="number" id="startInput" />
+            <label for="startInput" class="time">AM </label>
+            <label for="endInput"> Day Ends at:</label>
+            <input type="number" id="endInput" />
+            <label for="endInput" class="time">PM</label>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+        <div class="bottom-form">
+          <form class="taskForm">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" />
+            <label for="taskDate">Task Length:</label>
+            <input type="number" id="taskDate" />
+            <label for="taskLocation">Task Location:</label>
+            <input type="text" id="taskLoc" />
+            <input type="Submit" value="Submit" />
+          </form>
+        </div> -->
+        <div class="task-input-container">
+          <div class="add-task-container">
+            <span id="add-task">Add Task +</span>
+          </div>
+          <div id="inner">
+            <form action="" class="taskForm">
+              <input
+                type="text"
+                name="task-input"
+                id="task-input"
+                placeholder="Format: (task name, length, location)"
+              />
+              <input type="submit" value="Add" class="bottom-form-button" />
+              <input type="button" class="cancel-task" value="Cancel" />
+            </form>
+          </div>
+        </div>
+        <div class="todo-container">
+          <ul id="todos"></ul>
+        </div>
+      </div>
+    </div>
+    <canvas id="energy-chart"> </canvas>
+    
+    <!-- <script src="energyChart.js" type="module"></script> -->
+  </body>
+</html>
