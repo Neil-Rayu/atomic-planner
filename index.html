@@ -5,9 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.scss" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <title>Atomic Planner</title>
   </head>
   <body>
+    <div class="app-wrapper">
+      <div class="top-bar">
+        <i class="bx bx-menu" id="bar-menu"></i>
+      </div>
+      <div class="bottom-content-container">
+        <div id="sidebar-wrapper"></div>
+        <div class="task-wrapper">
+          <div class="heading" id="heading"></div>
+          <!-- <div class="top-form">
+            <form class="dayTimeForm">
+              <label for="startInput">Day Starts at:</label>
+              <input type="number" id="startInput" />
+              <label for="startInput" class="time">AM </label>
+              <label for="endInput"> Day Ends at:</label>
+              <input type="number" id="endInput" />
+              <label for="endInput" class="time">PM</label>
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        -->
+          <div class="task-input-container">
+            <div class="add-task-container">
+              <span id="add-task">Add Task +</span>
+            </div>
+            <div class="todo-container">
+              <ul id="todos"></ul>
+            </div>
+            <div id="inner">
+              <form action="" class="taskForm">
+                <input
+                  type="text"
+                  name="task-input"
+                  id="task-input"
+                  placeholder="Format: (task name, length, location)"
+                />
+                <input
+                  type="submit"
+                  name="submit"
+                  value="Add"
+                  class="bottom-form-button"
+                />
+                <input type="button" class="cancel-task" value="Cancel" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="info-wrapper">
       <div class="head-container">
         <h1>So... What is this all about?</h1>
@@ -53,59 +106,6 @@
       </div>
     </div>
 
-    <div class="app-wrapper">
-      <div class="sidebar-wrapper"></div>
-      <div class="task-wrapper">
-        <div class="heading" id="heading"></div>
-        <!-- <div class="top-form">
-          <form class="dayTimeForm">
-            <label for="startInput">Day Starts at:</label>
-            <input type="number" id="startInput" />
-            <label for="startInput" class="time">AM </label>
-            <label for="endInput"> Day Ends at:</label>
-            <input type="number" id="endInput" />
-            <label for="endInput" class="time">PM</label>
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
-        <div class="bottom-form">
-          <form class="taskForm">
-            <label for="taskName">Task Name:</label>
-            <input type="text" id="taskName" />
-            <label for="taskDate">Task Length:</label>
-            <input type="number" id="taskDate" />
-            <label for="taskLocation">Task Location:</label>
-            <input type="text" id="taskLoc" />
-            <input type="Submit" value="Submit" />
-          </form>
-        </div> -->
-        <div class="task-input-container">
-          <div class="add-task-container">
-            <span id="add-task">Add Task +</span>
-          </div>
-          <div id="inner">
-            <form action="" class="taskForm">
-              <input
-                type="text"
-                name="task-input"
-                id="task-input"
-                placeholder="Format: (task name, length, location)"
-              />
-              <input
-                type="submit"
-                name="submit"
-                value="Add"
-                class="bottom-form-button"
-              />
-              <input type="button" class="cancel-task" value="Cancel" />
-            </form>
-          </div>
-        </div>
-        <div class="todo-container">
-          <ul id="todos"></ul>
-        </div>
-      </div>
-    </div>
     <canvas id="energy-chart"> </canvas>
     <script type="module" src="./src/index.js"></script>
     <!-- <script src="./src/energyChart.js" type="module"></script> -->

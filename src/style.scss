@@ -1,17 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu&display=swap');
 body {
   background: linear-gradient(0deg, #121212, #121212),
     linear-gradient(127.52deg, #121212 28.28%, #47494b 131.58%);
   color: #ffffff;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
+
 .info-wrapper {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
 .head-container {
   text-align: center;
 }
+
 .list-container {
   ul {
     display: table;
@@ -19,18 +25,49 @@ body {
     line-height: 30px;
   }
 }
+
 .app-wrapper {
   display: flex;
-  height: 50vh;
-  .sidebar-wrapper {
-    height: 100%;
-    width: 25%;
+  height: 100vh;
+  margin-top: 0px;
+  padding-top: 0px;
+  flex-direction: column;
+
+  .top-bar {
+    position: sticky;
+    top: 0;
+    height: 40px;
+    background-color: rgb(56, 56, 56); //fff, .16 alpha
+    box-shadow: -2px -2px 10px 3px rgba(0, 0, 0, 0.5);
+    padding-top: 1%;
+    padding-left: 1%;
+    .bx.bx-menu {
+      width: 3%;
+    }
   }
+
+  .bottom-content-container {
+    display: flex;
+    height: 100%;
+  }
+
+  #sidebar-wrapper {
+    height: 100%;
+    width: 20%;
+    background-color: rgb(56, 56, 56);
+    margin-right: 5%;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 0 0 0 0;
+    transition: width 0.3s ease-in-out;
+  }
+
   .task-wrapper {
     width: 75%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 3%;
 
     .task-input-container {
       width: 100%;
@@ -41,10 +78,12 @@ body {
         background-color: rgb(255, 255, 255, 0.1);
         clip-path: circle(0% at 0% 0%);
         transition: clip-path 0.5s ease-in-out;
-        height: 100%;
+        height: 120px;
         margin-right: 50%;
         padding-left: 0.5%;
         border-radius: 3px;
+        box-shadow: -2px -2px 13px 8px rgba(0, 0, 0, 0.5);
+
         #task-input {
           text-align: start;
           border: none;
@@ -56,17 +95,19 @@ body {
           border-radius: 3px;
           color: white;
         }
+
         .bottom-form-button {
           border-radius: 3px;
           width: 10%;
           margin-top: 5%;
           background-color: #ffc00a;
           opacity: 60%;
+          &:hover {
+            opacity: 100%;
+            transition: opacity 0.2s ease;
+          }
         }
-        .bottom-form-button:hover {
-          opacity: 100%;
-          transition: opacity 0.2s ease;
-        }
+
         .cancel-task {
           border-radius: 3px;
           outline: none;
@@ -75,41 +116,28 @@ body {
           border: 6px;
           border-color: #ffffff;
           color: #ffffff;
-        }
-        .cancel-task:hover {
-          background-color: rgb(255, 255, 255, 1);
-          color: #000;
-          transition: background-color 0.2s ease, color 0.2s ease;
+          &:hover {
+            background-color: rgb(255, 255, 255, 1);
+            color: #000;
+            transition: background-color 0.2s ease, color 0.2s ease;
+          }
         }
       }
+
       .add-task-container {
         width: 100%;
       }
+
       .add-task-container:hover {
         color: #ffc00a;
       }
     }
-    // .top-form {
-    //   display: flex;
-    //   flex-direction: row;
-    //   flex: 2;
-    //   margin-bottom: 10px;
-    // }
-    // .dayTimeForm {
-    //   display: flex;
-    //   flex-direction: row;
-    //   .time {
-    //     padding-right: 7px;
-    //   }
-    // }
-    // .bottom-form {
-    //   height: 100px;
-    //   flex: 1;
-    //   display: flex;
-    // }
   }
+
   .todo-container {
+    ul {
+      list-style-type: circle;
+    }
     display: flex;
-    margin-top: 3%;
   }
 }

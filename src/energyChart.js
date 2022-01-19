@@ -11,8 +11,6 @@ const dayEnd = document.querySelector("[id='endInput']");
 //   }
 // }
 
-const dayV = [];
-
 dayTimeForm.onsubmit = (e) => {
   e.preventDefault();
   //calculateDay(dayStart.value, dayEnd.value);
@@ -47,7 +45,6 @@ dayTimeForm.onsubmit = (e) => {
       },
     },
   });
-
-  dayV.push(dayStart.value);
-  dayV.push(dayEnd.value);
+  localStorage.setItem('dayStartTime', JSON.stringify(dayStart.value));
+  localStorage.setItem('dayEndTime', JSON.stringify(dayEnd.value));
 };

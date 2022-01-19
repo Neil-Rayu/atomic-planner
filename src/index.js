@@ -53,3 +53,7 @@ document.querySelector("[class='cancel-task']").onclick =
   function closeInput() {
     document.getElementById('inner').style.clipPath = 'circle(0%)';
   };
+
+document.getElementById('bar-menu').onclick = function closeSidebar() {
+  document.getElementById('sidebar-wrapper').style.width = '0%';
+};
